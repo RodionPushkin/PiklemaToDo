@@ -61,7 +61,7 @@ const clearTask = (event: DragEvent) => {
           <div
             class="flex justify-between items-center p-3 border rounded shadow mb-2"
             :class="{ 'bg-gray-200': task.isReady }"
-            @dragstart="(event) => event.dataTransfer.setData('taskId', task.id)"
+            @dragstart="(event: any) => event.dataTransfer.setData('taskId', task.id)"
           >
             <input type="checkbox" v-model="task.isReady" />
             <span
